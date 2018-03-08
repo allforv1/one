@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>旋转3D</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<style>
+			*{margin: 0;padding: 0;}
+			body{background-color: #000;perspective: 800px;}
+			.box{
+				width: 1000px;
+				height: 350px;
+				margin: 75px auto;
+				border:5px dotted blue;
+				border-radius: 20px;
+				animation: go 5s infinite linear;
+			}
+			.box:hover{
+				animation-play-state: paused;
+			}
+			@keyframes go{
+				0%{transform: rotateX(45deg);}
+				50%{transform: rotateX(-45deg);}
+				100%{transform: rotateX(45deg);}
+			}
+			.box ul{
+				display: flex;
+				/*justify-content: space-around;*/
+				/*align-items: center;*/
+				list-style: none;
+				height: 350px;
+			}
+			.box ul li{
+				width: 220px;
+				height: 300px;
+				margin: auto;
+				transform-style: preserve-3d;
+			}
+			.box ul li img{
+				transition: 0.5s;
+			}
+			.box ul li:hover .text{
+				transform: rotateY(0deg);
+			}
+			.box ul li:hover img{
+				transform: rotateY(90deg);
+			}
+			.box ul li .text{
+				width: 220px;
+				height: 300px;
+				margin-top: -304px;
+				background-color: #008000;
+				transform: rotateY(-90deg);
+				transition: 0.5s;
+			}
+			.box ul li .text h3{
+				color: #fff;
+				font-size: 28px;
+				text-align: center;
+				line-height: 85px;
+			}
+			.box ul li .text p{
+				color: #fff;
+				text-indent: 2em;
+				font-weight:600 ;
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		><div class="box">
+			<ul>
+				<li>
+					<img src="img/1.jpg">
+					<div class="text">
+						<h3>西游记</h3>
+						<p>《西游记》是中国古典四大名著之一，作者吴承恩，又名《西游释厄传》成书于16世纪明朝中叶，主要描写了唐僧、孙悟空、猪八戒、沙悟净师徒四人去西天取经，历经九九八十一难的故事。</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/2.jpg">
+					<div class="text">
+						<h3>红楼梦</h3>
+						<p>《红楼梦》是一部具有世界影响力的人情小说作品  ，举世公认的中国古典小说巅峰之作，中国封建社会的百科全书，传统文化的集大成者。</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/3.jpg">
+					<div class="text">
+						<h3>水浒传</h3>
+						<p>《水浒传》以农民起义的发生、发展过程为主线，通过各个英雄被逼上梁山的不同经历，描写出他们由个体觉醒到走上联合反抗，到发展为盛大的农民起义队伍的全过程。</p>
+					</div>
+				</li>
+					
+				<li>
+					<img src="img/4.jpg">
+					<div class="text">
+						<h3>三国演义 </h3>
+						<p>《三国演义》描写了从东汉末年到西晋初年之间近百年的历史风云，诉说了东汉末年的群雄割据混战和魏、蜀、吴三国之间的政治和军事斗争，最终司马炎一统三国，建立晋朝的故事。</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
